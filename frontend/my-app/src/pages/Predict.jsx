@@ -2,16 +2,19 @@ import React, { useState } from "react";
 
 function Predict() {
   const [form, setForm] = useState({
+    age: "",
+    sex: "",
+    chest_pain_type: "",
+    resting_bp: "",
     cholesterol: "",
-    bp: "",
-    diabetes: false,
-    obesity: false,
-    shortness_of_breath: false,
-    chest_pain: false,
-    sweating: false,
-    stress: false,
-    poor_sleep: false,
-    smoking: false,
+    fasting_blood_sugar: "",
+    resting_ecg: "",
+    max_heart_rate: "",
+    exercise_induced_angina: "",
+    st_depression: "",
+    st_slope: "",
+    num_major_vessels: "",
+    thalassemia: "",
   });
 
   const [loading, setLoading] = useState(false);
@@ -19,10 +22,10 @@ function Predict() {
   const [error, setError] = useState(null);
 
   const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
+    const { name, value } = e.target;
     setForm((prev) => ({
       ...prev,
-      [name]: type === "checkbox" ? checked : value,
+      [name]: value,
     }));
   };
 
@@ -41,8 +44,10 @@ function Predict() {
       });
       if (!response.ok) throw new Error("Server Error!");
       const data = await response.json();
-      setResult(data.probability); // expects backend to return { probability: number }
+      // expects backend to return { probability: number }
+      setResult(data.probability);
     } catch (err) {
+      console.error(err);
       setError("Failed to fetch prediction.");
     }
     setLoading(false);
@@ -52,8 +57,79 @@ function Predict() {
     <div className="predict-page">
       <div className="container">
         <div className="predict-content">
-          <h1 className="predict-title">Heart Attack Risk Factors</h1>
+          <h1 className="predict-title">Heart Disease Prediction</h1>
+          <p className="predict-description">
+            Enter the patient details based on the UCI heart dataset fields.
+          </p>
+
           <form className="predict-form" onSubmit={handleSubmit}>
+            {/* 1. Age */}
+            <div className="form-group">
+              <label>
+                Age (years)
+                <input
+                  type="number"
+                  name="age"
+                  value={form.age}
+                  onChange={handleChange}
+                  min="0"
+                  required
+                />
+              </label>
+            </div>
+
+            {/* 2. Sex */}
+            <div className="form-group">
+              <label>
+                Sex
+                <select
+                  name="sex"
+                  value={form.sex}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="">Select</option>
+                  <option value="1">Male</option>
+                  <option value="0">Female</option>
+                </select>
+              </label>
+            </div>
+
+            {/* 3. Chest pain type */}
+            <div className="form-group">
+              <label>
+                Chest Pain Type
+                <select
+                  name="chest_pain_type"
+                  value={form.chest_pain_type}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="">Select</option>
+                  <option value="0">Typical angina</option>
+                  <option value="1">Atypical angina</option>
+                  <option value="2">Non-anginal pain</option>
+                  <option value="3">Asymptomatic</option>
+                </select>
+              </label>
+            </div>
+
+            {/* 4. Resting BP */}
+            <div className="form-group">
+              <label>
+                Resting Blood Pressure (mmHg)
+                <input
+                  type="number"
+                  name="resting_bp"
+                  value={form.resting_bp}
+                  onChange={handleChange}
+                  min="0"
+                  required
+                />
+              </label>
+            </div>
+
+            {/* 5. Cholesterol */}
             <div className="form-group">
               <label>
                 Cholesterol (mg/dL)
@@ -67,104 +143,157 @@ function Predict() {
                 />
               </label>
             </div>
+
+            {/* 6. Fasting blood sugar */}
             <div className="form-group">
               <label>
-                Blood Pressure (mmHg)
+                Fasting Blood Sugar &gt; 120 mg/dL
+                <select
+                  name="fasting_blood_sugar"
+                  value={form.fasting_blood_sugar}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="">Select</option>
+                  <option value="1">Yes</option>
+                  <option value="0">No</option>
+                </select>
+              </label>
+            </div>
+
+            {/* 7. Resting ECG */}
+            <div className="form-group">
+              <label>
+                Resting ECG
+                <select
+                  name="resting_ecg"
+                  value={form.resting_ecg}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="">Select</option>
+                  <option value="0">Normal</option>
+                  <option value="1">ST-T wave abnormality</option>
+                  <option value="2">Left ventricular hypertrophy</option>
+                </select>
+              </label>
+            </div>
+
+            {/* 8. Max heart rate */}
+            <div className="form-group">
+              <label>
+                Max Heart Rate Achieved
                 <input
                   type="number"
-                  name="bp"
-                  value={form.bp}
+                  name="max_heart_rate"
+                  value={form.max_heart_rate}
                   onChange={handleChange}
                   min="0"
                   required
                 />
               </label>
             </div>
-            <div className="form-group checkbox-group">
+
+            {/* 9. Exercise induced angina */}
+            <div className="form-group">
               <label>
-                <input
-                  type="checkbox"
-                  name="diabetes"
-                  checked={form.diabetes}
+                Exercise Induced Angina
+                <select
+                  name="exercise_induced_angina"
+                  value={form.exercise_induced_angina}
                   onChange={handleChange}
-                />
-                Diabetes
-              </label>
-              <label>
-                <input
-                  type="checkbox"
-                  name="obesity"
-                  checked={form.obesity}
-                  onChange={handleChange}
-                />
-                Obesity
-              </label>
-              <label>
-                <input
-                  type="checkbox"
-                  name="shortness_of_breath"
-                  checked={form.shortness_of_breath}
-                  onChange={handleChange}
-                />
-                Shortness of breath
-              </label>
-              <label>
-                <input
-                  type="checkbox"
-                  name="chest_pain"
-                  checked={form.chest_pain}
-                  onChange={handleChange}
-                />
-                Chest pain
-              </label>
-              <label>
-                <input
-                  type="checkbox"
-                  name="sweating"
-                  checked={form.sweating}
-                  onChange={handleChange}
-                />
-                Sweating
-              </label>
-              <label>
-                <input
-                  type="checkbox"
-                  name="stress"
-                  checked={form.stress}
-                  onChange={handleChange}
-                />
-                Stress
-              </label>
-              <label>
-                <input
-                  type="checkbox"
-                  name="poor_sleep"
-                  checked={form.poor_sleep}
-                  onChange={handleChange}
-                />
-                Poor sleep
-              </label>
-              <label>
-                <input
-                  type="checkbox"
-                  name="smoking"
-                  checked={form.smoking}
-                  onChange={handleChange}
-                />
-                Smoking
+                  required
+                >
+                  <option value="">Select</option>
+                  <option value="1">Yes</option>
+                  <option value="0">No</option>
+                </select>
               </label>
             </div>
-            <button className="btn btn-primary" type="submit" disabled={loading}>
-              {loading ? "Calculating..." : "Predict Heart Attack Risk"}
+
+            {/* 10. ST depression */}
+            <div className="form-group">
+              <label>
+                ST Depression (oldpeak)
+                <input
+                  type="number"
+                  step="0.1"
+                  name="st_depression"
+                  value={form.st_depression}
+                  onChange={handleChange}
+                  required
+                />
+              </label>
+            </div>
+
+            {/* 11. ST slope */}
+            <div className="form-group">
+              <label>
+                ST Slope
+                <select
+                  name="st_slope"
+                  value={form.st_slope}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="">Select</option>
+                  <option value="0">Upsloping</option>
+                  <option value="1">Flat</option>
+                  <option value="2">Downsloping</option>
+                </select>
+              </label>
+            </div>
+
+            {/* 12. Number of major vessels */}
+            <div className="form-group">
+              <label>
+                Number of Major Vessels (0–3)
+                <input
+                  type="number"
+                  name="num_major_vessels"
+                  value={form.num_major_vessels}
+                  onChange={handleChange}
+                  min="0"
+                  max="3"
+                  required
+                />
+              </label>
+            </div>
+
+            {/* 13. Thalassemia */}
+            <div className="form-group">
+              <label>
+                Thalassemia
+                <select
+                  name="thalassemia"
+                  value={form.thalassemia}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="">Select</option>
+                  <option value="1">Normal</option>
+                  <option value="2">Fixed defect</option>
+                  <option value="3">Reversible defect</option>
+                </select>
+              </label>
+            </div>
+
+            <button
+              className="btn btn-primary"
+              type="submit"
+              disabled={loading}
+            >
+              {loading ? "Calculating..." : "Predict Heart Disease Risk"}
             </button>
           </form>
+
           <div className="predict-output">
             {loading && <p>Loading prediction...</p>}
             {result !== null && (
               <div className="result-card">
                 <h2>Probability Score</h2>
                 <p>
-                  Your predicted risk of heart attack:{" "}
+                  Predicted risk of heart disease:{" "}
                   <span className="probability-score">
                     {(result * 100).toFixed(2)}%
                   </span>
@@ -173,11 +302,12 @@ function Predict() {
             )}
             {error && <p className="error">{error}</p>}
           </div>
-          <div className="risk-report" style={{ marginTop: '2rem' }}>
-          </div>
+
+          <div className="risk-report" style={{ marginTop: "2rem" }}></div>
         </div>
       </div>
     </div>
   );
 }
+
 export default Predict;
