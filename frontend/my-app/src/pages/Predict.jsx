@@ -174,19 +174,6 @@ function Predict() {
             {error && <p className="error">{error}</p>}
           </div>
           <div className="risk-report" style={{ marginTop: '2rem' }}>
-            <h3>Report :</h3>
-            <ul>
-              <li>Cholesterol</li>
-              <li>BP</li>
-              <li>Diabetes</li>
-              <li>Obesity</li>
-              <li>Shortness of breath</li>
-              <li>Chest pain</li>
-              <li>Sweating</li>
-              <li>Stress</li>
-              <li>Poor sleep</li>
-              <li>Smoking</li>
-            </ul>
           </div>
         </div>
       </div>
