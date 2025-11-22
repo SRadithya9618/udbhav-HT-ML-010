@@ -1,10 +1,11 @@
-
 import React, { useState } from "react";
 
 function Feedback() {
   const [formData, setFormData] = useState({
     name: "",
     feedback: "",
+    rating: "",
+    recommend: "",
   });
 
   const [success, setSuccess] = useState("");
@@ -17,7 +18,12 @@ function Feedback() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!formData.name.trim() || !formData.feedback.trim()) {
+    if (
+      !formData.name.trim() ||
+      !formData.feedback.trim() ||
+      !formData.rating ||
+      !formData.recommend
+    ) {
       setSuccess("❌ Please fill all fields");
       return;
     }
@@ -25,7 +31,7 @@ function Feedback() {
     console.log("Feedback Submitted:", formData);
     setSuccess("✅ Thank you! Your feedback has been submitted.");
 
-    setFormData({ name: "", feedback: "" });
+    setFormData({ name: "", feedback: "", rating: "", recommend: "" });
   };
 
   return (
@@ -51,6 +57,37 @@ function Feedback() {
             </div>
 
             <div className="form-group">
+              <label>⭐ How would you rate your overall experience? (1–5)</label>
+              <select
+                name="rating"
+                value={formData.rating}
+                onChange={handleChange}
+                className="form-input"
+              >
+                <option value="">Select Rating</option>
+                <option value="1">1 - Poor</option>
+                <option value="2">2 - Fair</option>
+                <option value="3">3 - Good</option>
+                <option value="4">4 - Very Good</option>
+                <option value="5">5 - Excellent</option>
+              </select>
+            </div>
+
+            <div className="form-group">
+              <label>👍 Would you recommend this to others?</label>
+              <select
+                name="recommend"
+                value={formData.recommend}
+                onChange={handleChange}
+                className="form-input"
+              >
+                <option value="">Select Option</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div className="form-group">
               <label>Your Feedback</label>
               <textarea
                 name="feedback"
@@ -62,9 +99,7 @@ function Feedback() {
               ></textarea>
             </div>
 
-            {success && (
-              <p className="success-msg">{success}</p>
-            )}
+            {success && <p className="success-msg">{success}</p>}
 
             <button type="submit" className="submit-btn">
               Submit Feedback
