@@ -3,7 +3,7 @@
 /* Global Styles */
 :root {
   font-family: 'Raleway', sans-serif;
-  color: #ffffff;
+  color: #000000;
   line-height: 1.5;
   font-weight: 400;
   font-synthesis: none;
@@ -19,7 +19,7 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background: #7C3AED;
+  background: #ffffff;
   text-align: center;
 }
 
@@ -42,8 +42,8 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0.75rem 1.5rem;
-  background: #7C3AED;
-  color: #ffffff;
+  background: #ffffff;
+  color: #000000;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -54,7 +54,7 @@ body {
   font-weight: 700;
   letter-spacing: 0.15em;
   font-size: 1.2rem;
-  color: #ffffff;
+  color: #000000;
 }
 
 .nav-links {
@@ -68,7 +68,7 @@ body {
   text-transform: uppercase;
   font-size: 0.85rem;
   letter-spacing: 0.15em;
-  color: #ffffff;
+  color: #000000;
   padding: 0.45rem 0.85rem;
   border-radius: 8px;
   text-decoration: none;
@@ -76,28 +76,28 @@ body {
 }
 
 .nav-link--active {
-  background: rgba(255, 255, 255, 0.2);
-  color: #ffffff;
+  background: rgba(0, 0, 0, 0.08);
+  color: #000000;
 }
 
 .nav-end {
   font-size: 0.8rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: #000000;
 }
 
 /* Home Page */
 .home-page {
   min-height: 100vh;
-  background: #7C3AED;
+  background: #ffffff;
   text-align: center;
 }
 
 .hero-section {
-  background: #7C3AED;
+  background: #ffffff;
   padding: 4rem 0;
-  color: #ffffff;
+  color: #000000;
   position: relative;
   overflow: hidden;
 }
@@ -115,12 +115,12 @@ body {
   font-weight: bold;
   margin-bottom: 1.5rem;
   line-height: 1.2;
-  color: #ffffff;
+  color: #000000;
   text-align: center;
 }
 
 .text-gradient {
-  color: #ffffff;
+  color: #000000;
 }
 
 .hero-description {
@@ -128,7 +128,7 @@ body {
   margin-bottom: 2rem;
   opacity: 0.9;
   line-height: 1.6;
-  color: #ffffff;
+  color: #000000;
   text-align: center;
 }
 
@@ -151,14 +151,14 @@ body {
 }
 
 .btn-primary {
-  background: rgba(255, 255, 255, 0.95);
-  color: #333;
+  background: #000000;
+  color: #ffffff;
 }
 
 .btn-outline {
   background: transparent;
-  color: #ffffff;
-  border-color: #ffffff;
+  color: #000000;
+  border-color: #000000;
 }
 
 .btn-large {
@@ -169,7 +169,7 @@ body {
 /* Features Section */
 .features-section {
   padding: 4rem 0;
-  background: #7C3AED;
+  background: #ffffff;
   text-align: center;
 }
 
@@ -182,17 +182,17 @@ body {
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  color: #ffffff;
+  color: #000000;
   text-align: center;
 }
 
 .text-primary {
-  color: #ffffff;
+  color: #000000;
 }
 
 .section-description {
   font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(0, 0, 0, 0.9);
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
@@ -205,7 +205,7 @@ body {
 }
 
 .feature-card {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.06);
   padding: 2rem;
   border-radius: 8px;
   border: 2px solid transparent;
@@ -218,7 +218,7 @@ body {
 .feature-icon {
   width: 60px;
   height: 60px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.12);
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -234,12 +234,12 @@ body {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
-  color: #ffffff;
+  color: #000000;
   text-align: center;
 }
 
 .feature-description {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(0, 0, 0, 0.87);
   line-height: 1.6;
   text-align: center;
 }
@@ -247,8 +247,8 @@ body {
 /* Stats Section */
 .stats-section {
   padding: 4rem 0;
-  background: #7C3AED;
-  color: #ffffff;
+  background: #ffffff;
+  color: #000000;
   text-align: center;
 }
 
@@ -269,28 +269,28 @@ body {
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
-  color: #ffffff;
+  color: #000000;
 }
 
 .stat-label {
   font-size: 1.1rem;
   opacity: 0.9;
-  color: #ffffff;
+  color: #000000;
 }
 
 /* CTA Section */
 .cta-section {
   padding: 4rem 0;
-  background: #7C3AED;
+  background: #ffffff;
   text-align: center;
-  color: #ffffff;
+  color: #000000;
 }
 
 .cta-title {
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  color: #ffffff;
+  color: #000000;
   text-align: center;
 }
 
@@ -301,14 +301,14 @@ body {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  color: #ffffff;
+  color: #000000;
   text-align: center;
 }
 
 /* Dashboard Page */
 .dashboard-page {
   min-height: 100vh;
-  background: #7C3AED;
+  background: #ffffff;
   padding: 2rem 0;
   text-align: center;
 }
@@ -322,18 +322,18 @@ body {
 .dashboard-title {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #ffffff;
+  color: #000000;
   margin-bottom: 0.5rem;
   text-align: center;
 }
 
 .dashboard-subtitle {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(0, 0, 0, 0.87);
   font-size: 1.1rem;
   text-align: center;
 }
 
-.metrics-grid {
+metrics-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
@@ -341,7 +341,7 @@ body {
 }
 
 .metric-card {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.06);
   padding: 1.5rem;
   border-radius: 8px;
   border: 2px solid transparent;
@@ -371,22 +371,22 @@ body {
 
 .metric-change.positive {
   color: #10b981;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.12);
 }
 
 .metric-change.negative {
   color: #ef4444;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.12);
 }
 
 .metric-change.neutral {
-  color: rgba(255, 255, 255, 0.9);
-  background: rgba(255, 255, 255, 0.2);
+  color: rgba(0, 0, 0, 0.87);
+  background: rgba(0, 0, 0, 0.12);
 }
 
 
 .metric-label {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(0, 0, 0, 0.87);
   font-size: 0.875rem;
   margin-bottom: 0.5rem;
   text-align: center;
@@ -403,19 +403,19 @@ body {
 .metric-value {
   font-size: 2rem;
   font-weight: bold;
-  color: #ffffff;
+  color: #000000;
 }
 
 .metric-unit {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(0, 0, 0, 0.87);
   font-size: 0.875rem;
 }
 
 .metric-status {
   display: inline-block;
   padding: 0.25rem 0.75rem;
-  background: rgba(255, 255, 255, 0.2);
-  color: #ffffff;
+  background: rgba(0, 0, 0, 0.08);
+  color: #000000;
   font-size: 0.75rem;
   font-weight: 600;
   border-radius: 8px;
@@ -431,7 +431,7 @@ body {
 .chart-card,
 .alerts-card,
 .readings-card {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.06);
   padding: 1.5rem;
   border-radius: 8px;
   border: 2px solid transparent;
@@ -442,7 +442,7 @@ body {
 .card-title {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #ffffff;
+  color: #000000;
   margin-bottom: 1rem;
   display: flex;
   align-items: center;
@@ -451,14 +451,14 @@ body {
 }
 
 .chart-placeholder {
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px dashed rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.06);
+  border: 2px dashed rgba(0, 0, 0, 0.12);
   border-radius: 8px;
   height: 16rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(0, 0, 0, 0.87);
 }
 
 .alerts-list {
@@ -475,25 +475,25 @@ body {
 }
 
 .alert-item.success {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.06);
+  border-color: rgba(0, 0, 0, 0.12);
 }
 
 .alert-item.info {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.06);
+  border-color: rgba(0, 0, 0, 0.12);
 }
 
 .alert-text {
   font-weight: 600;
-  color: #ffffff;
+  color: #000000;
   margin-bottom: 0.25rem;
   text-align: center;
 }
 
 .alert-time {
   font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(0, 0, 0, 0.87);
   text-align: center;
 }
 
@@ -508,21 +508,21 @@ body {
 }
 
 .readings-table thead {
-  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.12);
 }
 
 .readings-table th {
   text-align: center;
   padding: 0.75rem;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(0, 0, 0, 0.87);
   font-size: 0.875rem;
 }
 
 .readings-table td {
   padding: 0.75rem;
-  color: #ffffff;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: #000000;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
   text-align: center;
 }
 
@@ -535,19 +535,19 @@ body {
 }
 
 .status-badge.normal {
-  background: rgba(255, 255, 255, 0.2);
-  color: #ffffff;
+  background: rgba(0, 0, 0, 0.08);
+  color: #000000;
 }
 
 .status-badge.elevated {
-  background: rgba(255, 255, 255, 0.2);
-  color: #ffffff;
+  background: rgba(0, 0, 0, 0.08);
+  color: #000000;
 }
 
 /* About Page */
 .about-page {
   min-height: 100vh;
-  background: #7C3AED;
+  background: #ffffff;
   padding: 2rem 0;
   text-align: center;
 }
@@ -561,14 +561,14 @@ body {
 .about-title {
   font-size: 3rem;
   font-weight: bold;
-  color: #ffffff;
+  color: #000000;
   margin-bottom: 1rem;
   text-align: center;
 }
 
 .about-description {
   font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(0, 0, 0, 0.87);
   max-width: 700px;
   margin: 0 auto;
   line-height: 1.6;
@@ -576,7 +576,7 @@ body {
 }
 
 .story-card {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.06);
   padding: 2rem;
   border-radius: 8px;
   margin-bottom: 3rem;
@@ -589,13 +589,13 @@ body {
 .story-title {
   font-size: 2rem;
   font-weight: bold;
-  color: #ffffff;
+  color: #000000;
   margin-bottom: 1.5rem;
   text-align: center;
 }
 
 .story-content {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(0, 0, 0, 0.87);
   line-height: 1.8;
   text-align: center;
 }
@@ -617,7 +617,7 @@ body {
 }
 
 .value-card {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.06);
   padding: 2rem;
   border-radius: 8px;
   border: 2px solid transparent;
@@ -630,7 +630,7 @@ body {
 .value-icon {
   width: 60px;
   height: 60px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.12);
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -645,19 +645,19 @@ body {
 .value-title {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #ffffff;
+  color: #000000;
   margin-bottom: 0.75rem;
   text-align: center;
 }
 
 .value-description {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(0, 0, 0, 0.87);
   line-height: 1.6;
   text-align: center;
 }
 
 .stats-card {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.06);
   padding: 3rem 2rem;
   border-radius: 8px;
   margin-bottom: 2rem;
@@ -673,7 +673,7 @@ body {
 }
 
 .stat-item {
-  color: #ffffff;
+  color: #000000;
   text-align: center;
 }
 
@@ -681,32 +681,32 @@ body {
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
-  color: #ffffff;
+  color: #000000;
 }
 
 .stat-label {
   font-size: 1.1rem;
   opacity: 0.9;
-  color: #ffffff;
+  color: #000000;
 }
 
 .disclaimer {
   text-align: center;
   font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(0, 0, 0, 0.87);
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.6;
 }
 
 .disclaimer strong {
-  color: #ffffff;
+  color: #000000;
 }
 
 /* Predict Page */
 .predict-page {
   min-height: 100vh;
-  background: #7C3AED;
+  background: #ffffff;
   padding: 4rem 0;
   text-align: center;
 }
@@ -719,21 +719,21 @@ body {
 .predict-title {
   font-size: 3rem;
   font-weight: bold;
-  color: #ffffff;
+  color: #000000;
   margin-bottom: 1rem;
   text-align: center;
 }
 
 .predict-description {
   font-size: 1.25rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(0, 0, 0, 0.87);
   margin-bottom: 3rem;
   text-align: center;
 }
 
 .predict-placeholder {
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px dashed rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.06);
+  border: 2px dashed rgba(0, 0, 0, 0.12);
   border-radius: 8px;
   padding: 4rem 2rem;
   margin-top: 2rem;
@@ -746,7 +746,7 @@ body {
 }
 
 .predict-placeholder p {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(0, 0, 0, 0.87);
   font-size: 1.1rem;
   text-align: center;
 }
@@ -754,7 +754,7 @@ body {
 /* Feedback Page */
 .feedback-page {
   min-height: 100vh;
-  background: #7C3AED;
+  background: #ffffff;
   padding: 4rem 0;
   text-align: center;
 }
@@ -767,21 +767,21 @@ body {
 .feedback-title {
   font-size: 3rem;
   font-weight: bold;
-  color: #ffffff;
+  color: #000000;
   margin-bottom: 1rem;
   text-align: center;
 }
 
 .feedback-description {
   font-size: 1.25rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(0, 0, 0, 0.87);
   margin-bottom: 3rem;
   text-align: center;
 }
 
 .feedback-placeholder {
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px dashed rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.06);
+  border: 2px dashed rgba(0, 0, 0, 0.12);
   border-radius: 8px;
   padding: 4rem 2rem;
   margin-top: 2rem;
@@ -789,20 +789,20 @@ body {
 }
 
 .feedback-placeholder p {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(0, 0, 0, 0.87);
   font-size: 1.1rem;
   text-align: center;
 }
 
 /* Code Styling */
 code {
-  background: rgba(255, 255, 255, 0.95);
-  color: #333;
+  background: rgba(0, 0, 0, 0.08);
+  color: #000000;
   padding: 0.25rem 0.5rem;
   border-radius: 8px;
   font-family: 'Courier New', monospace;
   font-size: 0.9em;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.10);
   display: inline-block;
   text-align: center;
 }
