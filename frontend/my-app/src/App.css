@@ -1,112 +1,38 @@
 .app-shell {
   min-height: 100vh;
-  padding: 3rem 1.25rem;
-  background: radial-gradient(circle at top, #fdf7ff, #e2e8ff);
+  background: #0f111a;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
 }
 
-.hero {
-  width: min(960px, 100%);
-  background: #ffffff;
-  border-radius: 24px;
-  padding: 3rem;
-  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.15);
-}
-
-.eyebrow {
-  font-size: 0.85rem;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: #8e8ef2;
-  margin-bottom: 0.75rem;
-}
-
-h1 {
-  font-size: clamp(2.5rem, 3vw + 1rem, 3.5rem);
-  margin-bottom: 1rem;
-  color: #111;
-}
-
-.lead {
-  color: #4a4e69;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-}
-
-.status-chip {
-  display: inline-flex;
-  padding: 0.65rem 1rem;
-  border-radius: 999px;
-  background: #eff3ff;
-  color: #1e1c3d;
-  font-weight: 600;
-  font-size: 0.95rem;
-  border: 1px solid #d7defa;
-  margin-bottom: 2rem;
-}
-
-.info-grid {
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  margin-bottom: 2rem;
-}
-
-.info-grid article {
-  background: #f5f6ff;
-  padding: 1.25rem;
-  border-radius: 16px;
-  border: 1px solid rgba(46, 68, 182, 0.1);
-}
-
-.info-grid h3 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  color: #1f2a44;
-}
-
-.info-grid ul {
-  list-style: none;
-  padding: 0;
-  margin: 0.5rem 0 0;
-}
-
-.info-grid li {
-  margin-bottom: 0.4rem;
-  color: #1f2a44;
-}
-
-.register-form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
-.register-form input {
+.page-content {
   flex: 1;
-  min-width: 180px;
-  padding: 0.85rem 1rem;
-  border-radius: 12px;
-  border: 1px solid #d4d7ff;
-  background: #fff;
-  font-size: 1rem;
+  padding: 2rem 1.5rem 3rem;
+  background: linear-gradient(180deg, rgba(3, 8, 20, 0.9), #081024);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
-.register-form button {
-  border: none;
-  padding: 0.95rem 1.5rem;
-  border-radius: 12px;
-  background: #5345ff;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: transform 150ms ease, box-shadow 150ms ease;
+.page-panel {
+  width: min(960px, 100%);
+  background: #0b0e1c;
+  border-radius: 24px;
+  padding: 2.5rem;
+  border: 1px solid rgba(18, 24, 60, 0.7);
+  box-shadow: 0 35px 60px rgba(4, 5, 16, 0.65);
+  color: #eef2ff;
 }
 
-.register-form button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 15px 30px rgba(83, 69, 255, 0.25);
+.page-panel h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 2rem;
+  letter-spacing: 0.05em;
+}
+
+.page-panel p {
+  margin: 0;
+  line-height: 1.7;
+  color: #c8d2ff;
 }
